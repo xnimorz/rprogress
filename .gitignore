@@ -1,0 +1,10 @@
+*.esproj
+.idea
+build
+.DS_Store
+node_modules
+*.iml
+npm-debug.log
+*.sketch
+lib
+example.bundle.js

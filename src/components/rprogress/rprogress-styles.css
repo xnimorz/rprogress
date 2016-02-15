@@ -1,0 +1,9 @@
+.rprogress {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: all 200ms linear;
+    pointer-events: none;
+}
