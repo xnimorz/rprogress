@@ -9,10 +9,10 @@ var MAX_UNCOMPLETED_SIZE = 95;
 
 var API = {
     start: () => {
-        position = 0;
+        position = Math.trunc(Math.random() * 15) + 10;
         Events.emit('progress', {
             type:  PROGRESS_START,
-            position: 0
+            position: position
         });
         checkMaxPosition();
     },
@@ -29,7 +29,7 @@ var API = {
     step: (to) => {
         if (arguments.length > 0) {
             if (to > 100) {
-                throw new Exception('Maximum progress size is 100. You can not set progress value bigger than 100');
+                throw new Error('Maximum progress size is 100. You can not set progress value bigger than 100');
             }
             position = to;
         } else {
@@ -45,6 +45,10 @@ var API = {
             position: position
         });
         checkMaxPosition();
+    },
+
+    release: () => {
+        position = 0;
     },
 
     subscribe: (callback) => {

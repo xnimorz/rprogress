@@ -26,9 +26,7 @@ class Overlay extends Component {
         ReactDOM.render(
             (
                 <div className={`${styles.overlay} ${visible ? styles.overlay_active : ''}`}>
-                    <div className={styles.overlay__content}>
-                        {children}
-                    </div>
+                    {children}
                 </div>
             ),
             this.node

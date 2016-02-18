@@ -8,3 +8,4 @@ npm-debug.log
 *.sketch
 lib
 example.bundle.js
+example.bundle.js.map

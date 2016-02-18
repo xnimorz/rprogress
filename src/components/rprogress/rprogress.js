@@ -10,7 +10,8 @@ class RProgress extends Component {
         super(props, context);
 
         this.state = {
-            progress: 0
+            progress: 0,
+            active: false
         };
 
         API.subscribe((data) => {
@@ -21,7 +22,7 @@ class RProgress extends Component {
     }
 
     render() {
-        const { progress } = this.state;
+        const { progress, active } = this.state;
         const { className } = this.props;
 
         if (!progress) {
@@ -29,8 +30,9 @@ class RProgress extends Component {
         }
 
         return (
-            <Overlay>
-                <div className={`${styles.rprogress} ${className || ''}`} style={`width: ${progress}%`}></div>
+            <Overlay visible={active}>
+                <div className={`${styles.rprogress} ${className || ''}`}
+                     style={`width: ${progress}%`}></div>
             </Overlay>
         );
     }
