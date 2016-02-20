@@ -4,10 +4,11 @@
     top: 0;
     left: 0;
     width: 0;
-    height: 4px;
-    transition: all 200ms linear;
+    height: 2px;
+    transition: all 400ms linear;
+    border-radius: 1px;
     pointer-events: none;
-    background: #b91f1f;
+    background-color: #b91f1f;
     transform: translateZ(0);
     will-change: width;
 }

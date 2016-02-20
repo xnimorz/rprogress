@@ -5,9 +5,11 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
     entry: './src/index.js',
     output: {
+        library: 'RProgress',
         path: __dirname + '/lib',
         filename: 'rprogress.js',
-        publicPath: '/lib'
+        publicPath: '/lib',
+        libraryTarget: 'umd'
     },
     resolve: {
         extensions: ['', '.jsx', '.css', '.js']

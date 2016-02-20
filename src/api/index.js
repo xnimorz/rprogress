@@ -4,12 +4,12 @@ import { PROGRESS_START, PROGRESS_STEP, PROGRESS_COMPLETE } from './constants';
 
 var Events = new E2;
 var position = 0;
-var MAX_ANIMATE_SIZE = 90;
+var MAX_ANIMATE_SIZE = 93;
 var MAX_UNCOMPLETED_SIZE = 95;
 
 var API = {
     start: () => {
-        position = Math.trunc(Math.random() * 15) + 10;
+        position = Math.trunc(Math.random() * 10) + 2;
         Events.emit('progress', {
             type:  PROGRESS_START,
             position: position
@@ -27,7 +27,7 @@ var API = {
     },
 
     step: (to) => {
-        if (arguments.length > 0) {
+        if (arguments.length > 0 && to !== undefined) {
             if (to > 100) {
                 throw new Error('Maximum progress size is 100. You can not set progress value bigger than 100');
             }
@@ -61,7 +61,7 @@ var API = {
 
 function animate() {
     if (position < MAX_ANIMATE_SIZE) {
-        var delta = Math.trunc(Math.random() * 4) + 1;
+        var delta = Math.trunc(Math.random() * 2);
         API.step(position + delta);
     }
 }

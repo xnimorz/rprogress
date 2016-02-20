@@ -1,1 +1,59 @@
-/* to be declared */
+.content {
+    max-width: 600px;
+    margin: auto;
+    font-size: 14px;
+}
+
+.item {
+    margin-top: 10px;
+}
+
+button {
+    user-select: none;
+
+    color: #333;
+    background-color: #F9F9F9;
+    display: inline-block;
+    height: 30px;
+
+    position: relative;
+    box-sizing: border-box;
+    padding: 3px;
+    border: 1px solid;
+    margin: 0;
+
+    font-size: 14px;
+    font-family: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+}
+
+button:hover {
+    text-decoration: none;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+}
+
+button:focus {
+    outline: none;
+    text-decoration: none;
+    box-shadow: 0 1px rgba(0, 0, 0, .15);
+}
+
+button:active {
+     text-decoration: none;
+     border-color: #0f8fee;
+     outline: none;
+     box-shadow: 0 1px rgba(0, 0, 0, .15);
+ }
