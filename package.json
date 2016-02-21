@@ -10,6 +10,15 @@
     "example": "webpack && webpack --config webpack.example.js",
     "example-server": "http-server -p 8080 -c-1"
   },
+  "keywords": [
+    "progress",
+    "progress-bar",
+    "ajax-loader",
+    "loader",
+    "react-progress",
+    "react-progress-bar",
+    "ajax-heavy"
+  ],
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^6.3.3",
