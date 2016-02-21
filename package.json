@@ -1,6 +1,6 @@
 {
   "name": "rprogress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React progress bar for a heavy ajax sites",
   "main": "lib/rpogress.js",
   "author": "Nikita Mostovoy <xnimor@ya.ru> (http://xnim.ru)",
