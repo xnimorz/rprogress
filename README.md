@@ -87,3 +87,17 @@ RProgressApi.toggleAnimation(animationEnableFlag) - turn off\on auto-progress
 
 Progress bar indicate working and after every 500ms animate himself. In this case progress bar position increase up to 2%
 You can turn off auto-progress call ```RProgressApi.toggleAnimation(false)```
+
+### Customize
+
+You can customize component by setting className:
+
+```
+import { RProgress } from 'rprogress';
+
+import 'rpogress/lib/rprogress-styles.css';
+import 'myStylesClass.css';
+
+React.render(<RProgress className='myStylesClass' />);
+```
+
