@@ -17,6 +17,7 @@ render(
         }>RProgressApi.step(input.value || 50)</button>{' - '}<input ref={(elem) => inputRef = elem} type='text'/> - set progress directly</div>
         <div className='item'><button onClick={() => RProgressApi.complete()}>RProgressApi.complete()</button> - complete progress bar</div>
         <div className='item'><button onClick={() => RProgressApi.subscribe(data => (console.log(data)))}>RProgressApi.subscribe(data => (console.log(data)))</button> - subscribe to progress bar changes</div>
+        <div className='item'><button onClick={() => RProgressApi.toggleAnimation()}>RProgressApi.toggleAnimation()</button> - toggle auto-progress</div>
         <RProgress />
     </div>
 , document.getElementById('app'));

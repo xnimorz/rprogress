@@ -1,4 +1,4 @@
-.overlay {
+.rprogress-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -9,6 +9,6 @@
     pointer-events: none;
 }
 
-.overlay_active {
+.rprogress-overlay_active {
     display: block;
 }

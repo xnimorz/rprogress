@@ -4,6 +4,12 @@
   "description": "React progress bar for a heavy ajax sites",
   "main": "lib/rpogress.js",
   "author": "Nikita Mostovoy <xnimor@ya.ru> (http://xnim.ru)",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register ./tests/index",
+    "build": "webpack",
+    "example": "webpack && webpack --config webpack.example.js",
+    "example-server": "http-server -p 8080 -c-1"
+  },
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^6.3.3",
@@ -14,10 +20,14 @@
     "css-loader": "^0.23.1",
     "e2": "^1.0.2",
     "extract-text-webpack-plugin": "^1.0.1",
+    "mocha": "^2.4.5",
     "postcss-loader": "^0.8.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13"
+  },
+  "devDependencies": {
+    "babel-register": "^6.5.2"
   }
 }

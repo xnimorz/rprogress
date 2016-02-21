@@ -6,6 +6,7 @@ var Events = new E2;
 var position = 0;
 var MAX_ANIMATE_SIZE = 93;
 var MAX_UNCOMPLETED_SIZE = 95;
+var animationEnabled = true;
 
 var API = {
     start: () => {
@@ -15,6 +16,17 @@ var API = {
             position: position
         });
         checkMaxPosition();
+    },
+
+    toggleAnimation: (enableAnimation) => {
+        if (enableAnimation !== undefined) {
+            animationEnabled = enableAnimation;
+        } else {
+            animationEnabled = !animationEnabled;
+        }
+        if (animationEnabled) {
+            checkMaxPosition();
+        }
     },
 
     complete: () => {
@@ -60,8 +72,8 @@ var API = {
 };
 
 function animate() {
-    if (position < MAX_ANIMATE_SIZE) {
-        var delta = Math.trunc(Math.random() * 2);
+    if (position < MAX_ANIMATE_SIZE && animationEnabled) {
+        var delta = Math.random() * 2;
         API.step(position + delta);
     }
 }
