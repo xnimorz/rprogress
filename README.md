@@ -21,7 +21,7 @@ There are several ways to use rprogress.js :
 ##### №1) use webpack bundle
 
 ```
-import { RProgress, RProgressApi } from 'rprogress';
+import { RProgress, RProgressApi } from 'rprogress/lib/rprogress';
 ```
 
 Then you need to add css-loader to your webpack config file.
