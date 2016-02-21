@@ -38,6 +38,15 @@ describe('api.start', () => {
         api.start();
     });
 
+    it ('called with data.type === PROGRESS_START', () => {
+        const unsubscribe = api.subscribe(event => {
+            assert.equal(event.data.type, PROGRESS_START);
+            unsubscribe();
+        });
+
+        api.start();
+    });
+
     it ('set up position up to 10%', done => {
         const unsubscribe = api.subscribe(event => {
             assert.ok(event.data.position <= 10);
@@ -47,17 +56,6 @@ describe('api.start', () => {
 
         api.start();
     });
-
-    it ('called with data.type === PROGRESS_START', done => {
-        const unsubscribe = api.subscribe(event => {
-            assert.equal(event.data.type, PROGRESS_START);
-            unsubscribe();
-            done();
-        });
-
-        api.start();
-    });
-
 });
 
 
@@ -79,7 +77,6 @@ describe('api.step', () => {
     });
 
     it('set up positon if first argument sended', (done) => {
-        api.start();
         const unsubscribe = api.subscribe(event => {
             assert.equal(event.data.position, 40);
             unsubscribe();

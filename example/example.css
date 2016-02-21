@@ -8,6 +8,21 @@
     margin-top: 10px;
 }
 
+h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon {
+    background-image: url('./gh.svg');
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 button {
     user-select: none;
 
