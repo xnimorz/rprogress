@@ -1,5 +1,11 @@
 export default (function whichTransitionEndEvent() {
-    const fakeElement = document.createElement('dummyNode');
+    var fakeElement;
+    try {
+        fakeElement = document.createElement('dummyNode');
+    } catch(e) {
+        // node.js environment
+        return null;
+    }
 
     const animations = {
         /* Firstly WebkitAnimation because android 4.x return true on all checks */
