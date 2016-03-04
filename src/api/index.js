@@ -10,7 +10,7 @@ var animationEnabled = true;
 
 var API = {
     start: () => {
-        position = Math.trunc(Math.random() * 10) + 2;
+        position = Math.floor(Math.random() * 10) + 2;
         Events.emit('progress', {
             type:  PROGRESS_START,
             position: position
