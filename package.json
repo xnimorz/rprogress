@@ -19,7 +19,7 @@
     "react-progress-bar",
     "ajax-heavy"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.5.2",
