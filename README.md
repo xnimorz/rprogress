@@ -21,6 +21,12 @@ There are several ways to use rprogress.js :
 ##### №1) use webpack bundle
 
 ```
+import { RProgress, RProgressApi } from 'rprogress';
+```
+
+or
+
+```
 import { RProgress, RProgressApi } from 'rprogress/lib/index';
 ```
 
