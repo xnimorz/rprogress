@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import {RProgress, RProgressApi } from '../lib/rprogress.js';
+import {RProgress, RProgressApi } from '../lib/index';
 
 var inputRef;
 

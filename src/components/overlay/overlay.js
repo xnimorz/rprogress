@@ -25,7 +25,7 @@ class Overlay extends Component {
 
         ReactDOM.render(
             (
-                <div className={`${styles['rprogress-overlay']} ${visible ? styles['rprogress-overlay_active'] : ''}`}>
+                <div className={`${styles['rprogress-overlay'] || 'rprogress-overlay'} ${visible ? styles['rprogress-overlay_active'] || 'rprogress-overlay_active' : ''}`}>
                     {children}
                 </div>
             ),

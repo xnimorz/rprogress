@@ -1,0 +1,14 @@
+.rprogress {
+    position: relative;
+    z-index: 2147483647;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 400ms linear;
+    border-radius: 1px;
+    pointer-events: none;
+    background-color: #b91f1f;
+    transform: translateZ(0);
+    will-change: width;
+}

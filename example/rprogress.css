@@ -1,4 +1,4 @@
-.overlay-styles__rprogress-overlay___1Gkdb {
+.overlay-styles__rprogress-overlay___3lySW {
     display: none;
     position: fixed;
     top: 0;
@@ -9,10 +9,10 @@
     pointer-events: none;
 }
 
-.overlay-styles__rprogress-overlay_active___1tosO {
+.overlay-styles__rprogress-overlay_active___3V4Gl {
     display: block;
 }
-.rprogress-styles__rprogress___Gjtyv {
+.rprogress-styles__rprogress___3sF0q {
     position: relative;
     z-index: 2147483647;
     top: 0;
@@ -27,4 +27,4 @@
     will-change: width;
 }
 
-/*# sourceMappingURL=rprogress-styles.css.map*/
+/*# sourceMappingURL=rprogress.css.map*/

@@ -44,7 +44,7 @@ class RProgress extends Component {
 
         return (
             <Overlay visible={active}>
-                <div className={`${styles.rprogress} ${className || ''}`}
+                <div className={`${styles.rprogress || 'rprogress'} ${className || ''}`}
                      style={{width: progress + '%'}}
                      ref={progress => this.progress = progress}> </div>
             </Overlay>

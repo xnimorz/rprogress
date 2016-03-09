@@ -21,7 +21,7 @@ There are several ways to use rprogress.js :
 ##### №1) use webpack bundle
 
 ```
-import { RProgress, RProgressApi } from 'rprogress/lib/rprogress';
+import { RProgress, RProgressApi } from 'rprogress/lib/index';
 ```
 
 Then you need to add css-loader to your webpack config file.
@@ -36,6 +36,20 @@ For example:
      )
  }
 ```
+
+RProgress support css-modules, but you can compile css without them:
+```
+ {
+     test: /\.css$/,
+     loader: ExtractTextPlugin.extract(
+         'style',
+         'css?importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+     )
+ }
+```
+
+In this case rprogress will use "rpgogress", "rprogress-overlay" css classes.
+
 
 ##### №2) use source code
 
@@ -63,7 +77,7 @@ module: {
     }
 ```
 
-Also you can open [webpack.example.js](https://github.com/xnimorz/rprogress/blob/master/webpack.example.js) or [webpack.config.js](https://github.com/xnimorz/rprogress/blob/master/webpack.config.js) to check webpack configs.
+Also you can open [webpack.config.js](https://github.com/xnimorz/rprogress/blob/master/webpack.example.css-modules.config.js) or [webpack.example.js (without css-modules)](https://github.com/xnimorz/rprogress/blob/master/webpack.example.js) to check webpack configs.
 
 ### API
 
@@ -95,7 +109,6 @@ You can customize component by setting className:
 ```
 import { RProgress } from 'rprogress';
 
-import 'rpogress/lib/rprogress-styles.css';
 import 'myStylesClass.css';
 
 React.render(<RProgress className='myStylesClass' />);

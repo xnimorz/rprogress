@@ -3,13 +3,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './example/example.js',
     output: {
-        library: 'RProgress',
-        path: __dirname + '/lib',
-        filename: 'rprogress.js',
-        publicPath: '/lib',
-        libraryTarget: 'umd'
+        path: __dirname + '/example',
+        filename: 'example.bundle.js',
+        publicPath: '/lib'
     },
     resolve: {
         extensions: ['', '.jsx', '.css', '.js']
@@ -29,7 +27,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('rprogress-styles.css', { allChunks: true })
+        new ExtractTextPlugin('rprogress.css', { allChunks: true })
     ],
     postcss: function () {
         return [
