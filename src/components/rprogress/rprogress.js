@@ -19,12 +19,14 @@ class RProgress extends Component {
         API.subscribe((event) => {
             const { data } = event;
             if (data.type === PROGRESS_COMPLETE) {
-                this.progress.addEventListener(transitionEndEvent, () => {
-                    this.setState({
-                        progress: 0,
-                        active: false
+                if (this.progress) {
+                    this.progress.addEventListener(transitionEndEvent, () => {
+                        this.setState({
+                            progress: 0,
+                            active: false
+                        });
                     });
-                });
+                }
             }
 
             this.setState({
