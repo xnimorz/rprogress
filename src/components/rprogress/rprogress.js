@@ -26,6 +26,11 @@ class RProgress extends Component {
                             active: false
                         });
                     });
+                } else {
+                    this.setState({
+                        progress: 0,
+                        active: false
+                    });
                 }
             }
 
