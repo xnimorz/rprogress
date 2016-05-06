@@ -12,3 +12,21 @@
     transform: translateZ(0);
     will-change: width;
 }
+
+
+.rprogress_cycle {
+    width: 25%;
+    left: -25%;
+    animation: animate 3s ease;
+    animation-iteration-count: infinite;
+    will-change: left;
+}
+
+@keyframes animate {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}

@@ -58,116 +58,159 @@
 	
 	var inputRef;
 	
-	(0, _reactDom.render)(_react2.default.createElement(
-	    'div',
-	    { className: 'content' },
-	    _react2.default.createElement('a', { href: 'https://github.com/xnimorz/rprogress', className: 'icon' }),
-	    _react2.default.createElement(
-	        'h1',
-	        null,
-	        'RProgress.js'
-	    ),
-	    _react2.default.createElement(
-	        'p',
-	        null,
-	        'Simple react progress bar library. It\'s helpful to create Ajax-heavy apps.'
-	    ),
-	    _react2.default.createElement(
-	        'p',
-	        null,
-	        'Library use React component and API to manage progress bar'
-	    ),
-	    _react2.default.createElement(
+	function showContent() {
+	    var color = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+	    var type = arguments.length <= 1 || arguments[1] === undefined ? 'incremental' : arguments[1];
+	
+	    (0, _reactDom.render)(_react2.default.createElement(
 	        'div',
-	        { className: 'item' },
+	        { className: 'content' },
+	        _react2.default.createElement('a', { href: 'https://github.com/xnimorz/rprogress', className: 'icon' }),
 	        _react2.default.createElement(
-	            'button',
-	            { onClick: function onClick() {
-	                    return _index.RProgressApi.start();
-	                } },
-	            'RProgressApi.start()'
+	            'h1',
+	            null,
+	            'RProgress.js'
 	        ),
-	        ' - show RProgress'
-	    ),
-	    _react2.default.createElement(
-	        'div',
-	        { className: 'item' },
 	        _react2.default.createElement(
-	            'button',
-	            { onClick: function onClick() {
-	                    return _index.RProgressApi.step();
-	                } },
-	            'RProgressApi.step()'
+	            'p',
+	            null,
+	            'Simple react progress bar library. It\'s helpful to create Ajax-heavy apps.'
 	        ),
-	        ' - increment about 10% to progress bar'
-	    ),
-	    _react2.default.createElement(
-	        'div',
-	        { className: 'item' },
 	        _react2.default.createElement(
-	            'button',
-	            { onClick: function onClick() {
-	                    _index.RProgressApi.step(parseInt(inputRef.value, 10) || 50);
-	                } },
-	            'RProgressApi.step(input.value || 50)'
+	            'p',
+	            null,
+	            'Library use React component and API to manage progress bar'
 	        ),
-	        ' - ',
-	        _react2.default.createElement('input', { ref: function ref(elem) {
-	                return inputRef = elem;
-	            }, type: 'text' }),
-	        ' - set progress directly'
-	    ),
-	    _react2.default.createElement(
-	        'div',
-	        { className: 'item' },
 	        _react2.default.createElement(
-	            'button',
-	            { onClick: function onClick() {
-	                    return _index.RProgressApi.complete();
-	                } },
-	            'RProgressApi.complete()'
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return _index.RProgressApi.start();
+	                    } },
+	                'RProgressApi.start()'
+	            ),
+	            ' - show RProgress'
 	        ),
-	        ' - complete progress bar'
-	    ),
-	    _react2.default.createElement(
-	        'div',
-	        { className: 'item' },
 	        _react2.default.createElement(
-	            'button',
-	            { onClick: function onClick() {
-	                    return _index.RProgressApi.subscribe(function (data) {
-	                        return console.log(data);
-	                    });
-	                } },
-	            'RProgressApi.subscribe(data => (console.log(data)))'
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return _index.RProgressApi.step();
+	                    } },
+	                'RProgressApi.step()'
+	            ),
+	            ' - increment about 10% to progress bar'
 	        ),
-	        ' - subscribe to progress bar changes'
-	    ),
-	    _react2.default.createElement(
-	        'div',
-	        { className: 'item' },
 	        _react2.default.createElement(
-	            'button',
-	            { onClick: function onClick() {
-	                    return _index.RProgressApi.toggleAnimation();
-	                } },
-	            'RProgressApi.toggleAnimation()'
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        _index.RProgressApi.step(parseInt(inputRef.value, 10) || 50);
+	                    } },
+	                'RProgressApi.step(input.value || 50)'
+	            ),
+	            ' - ',
+	            _react2.default.createElement('input', { ref: function ref(elem) {
+	                    return inputRef = elem;
+	                }, type: 'text' }),
+	            ' - set progress directly'
 	        ),
-	        ' - toggle auto-progress'
-	    ),
-	    _react2.default.createElement(
-	        'div',
-	        { className: 'item' },
-	        'Fork me on ',
 	        _react2.default.createElement(
-	            'a',
-	            { href: 'https://github.com/xnimorz/rprogress' },
-	            'GitHub'
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return _index.RProgressApi.complete();
+	                    } },
+	                'RProgressApi.complete()'
+	            ),
+	            ' - complete progress bar'
 	        ),
-	        '.'
-	    ),
-	    _react2.default.createElement(_index.RProgress, null)
-	), document.getElementById('app'));
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return _index.RProgressApi.subscribe(function (data) {
+	                            return console.log(data);
+	                        });
+	                    } },
+	                'RProgressApi.subscribe(data => (console.log(data)))'
+	            ),
+	            ' - subscribe to progress bar changes'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return _index.RProgressApi.toggleAnimation();
+	                    } },
+	                'RProgressApi.toggleAnimation()'
+	            ),
+	            ' - toggle auto-progress'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return showContent('#21B919', type);
+	                    } },
+	                'RProgress color=\'#21B919\''
+	            ),
+	            ' - change RProgress color prop to #21B919'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return showContent(color, 'cycle');
+	                    } },
+	                'RProgress type=\'cycle\''
+	            ),
+	            ' - change RProgress type prop to cycle'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'item' },
+	            _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                        return showContent();
+	                    } },
+	                'RProgress'
+	            ),
+	            ' - turn on default settings'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'item' },
+	            'Fork me on ',
+	            _react2.default.createElement(
+	                'a',
+	                { href: 'https://github.com/xnimorz/rprogress' },
+	                'GitHub'
+	            ),
+	            '.'
+	        ),
+	        _react2.default.createElement(_index.RProgress, { color: color, type: type })
+	    ), document.getElementById('app'));
+	}
+	
+	showContent();
 
 /***/ },
 /* 1 */
@@ -19915,6 +19958,9 @@
 	    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	}
 	
+	var CYCLE_TYPE = 'cycle';
+	var CYCLE_PERCENTS = 25;
+	
 	var RProgress = function (_Component) {
 	    _inherits(RProgress, _Component);
 	
@@ -19931,19 +19977,27 @@
 	        _api2.default.subscribe(function (event) {
 	            var data = event.data;
 	
-	            if (data.type === _constants.PROGRESS_COMPLETE) {
-	                _this.progress.addEventListener(_whichTransitionEndEvent2.default, function () {
-	                    _this.setState({
-	                        progress: 0,
-	                        active: false
-	                    });
-	                });
-	            }
-	
 	            _this.setState({
 	                progress: data.position,
 	                active: true
 	            });
+	
+	            if (data.type === _constants.PROGRESS_COMPLETE) {
+	
+	                if (_this.progress && _this.props.type !== CYCLE_TYPE) {
+	                    _this.progress.addEventListener(_whichTransitionEndEvent2.default, function () {
+	                        _this.setState({
+	                            progress: 0,
+	                            active: false
+	                        });
+	                    });
+	                } else {
+	                    _this.setState({
+	                        progress: 0,
+	                        active: false
+	                    });
+	                }
+	            }
 	        });
 	        return _this;
 	    }
@@ -19956,14 +20010,32 @@
 	            var _state = this.state;
 	            var progress = _state.progress;
 	            var active = _state.active;
-	            var className = this.props.className;
+	            var _props = this.props;
+	            var className = _props.className;
+	            var type = _props.type;
+	            var color = _props.color;
 	
 	            if (!progress) {
 	                return _react2.default.DOM.noscript();
 	            }
 	
-	            return _react2.default.createElement(_overlay2.default, { visible: active }, _react2.default.createElement('div', { className: (_rprogressStyles2.default.rprogress || 'rprogress') + ' ' + (className || ''),
-	                style: { width: progress + '%' },
+	            var percents = progress;
+	            var cycleClass = undefined;
+	            if (type === CYCLE_TYPE) {
+	                percents = CYCLE_PERCENTS;
+	                cycleClass = 'rprogress_cycle';
+	            }
+	
+	            var stylesObj = {
+	                width: percents + '%'
+	            };
+	            if (color) {
+	                stylesObj.backgroundColor = color;
+	            }
+	            var classes = (_rprogressStyles2.default.rprogress || 'rprogress') + ' ' + (cycleClass ? _rprogressStyles2.default[cycleClass] || cycleClass : '') + ' ' + (className || '');
+	
+	            return _react2.default.createElement(_overlay2.default, { visible: active }, _react2.default.createElement('div', { className: classes,
+	                style: stylesObj,
 	                ref: function ref(progress) {
 	                    return _this2.progress = progress;
 	                } }, ' '));
@@ -20617,7 +20689,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"rprogress":"rprogress-styles__rprogress___3sF0q"};
+	module.exports = {"rprogress":"rprogress-styles__rprogress___3sF0q","rprogress_cycle":"rprogress-styles__rprogress_cycle___3Hawq","animate":"rprogress-styles__animate___3tcIZ"};
 
 /***/ }
 /******/ ]);

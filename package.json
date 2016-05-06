@@ -1,6 +1,6 @@
 {
   "name": "rprogress",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "React progress bar for a heavy ajax sites",
   "main": "./lib/index.js",
   "author": "Nikita Mostovoy <xnimor@ya.ru> (http://xnim.ru)",
@@ -12,6 +12,10 @@
     "example-server": "http-server -p 8080 -c-1",
     "babel": "babel ./src --out-dir ./lib",
     "css": "cpx './src/**/*.css' ./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xnimorz/rprogress.git"
   },
   "keywords": [
     "progress",

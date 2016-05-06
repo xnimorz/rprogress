@@ -27,4 +27,21 @@
     will-change: width;
 }
 
+
+.rprogress-styles__rprogress_cycle___3Hawq {
+    width: 25%;
+    left: -25%;
+    animation: rprogress-styles__animate___3tcIZ 3s ease;
+    animation-iteration-count: infinite;
+    will-change: left;
+}
+
+@keyframes rprogress-styles__animate___3tcIZ {
+    0% {
+        left: -25%;
+    }
+    100% {
+        left: 100%;
+    }
+}
 /*# sourceMappingURL=rprogress.css.map*/
