@@ -44,6 +44,10 @@ class RProgress extends Component {
                 }
             }
         });
+
+        this.getReference = (progress) => {
+            this.progress = progress;
+        }
     }
 
     render() {
@@ -73,7 +77,7 @@ class RProgress extends Component {
             <Overlay visible={active}>
                 <div className={classes}
                      style={stylesObj}
-                     ref={progress => this.progress = progress}> </div>
+                     ref={this.getReference}> </div>
             </Overlay>
         );
     }
