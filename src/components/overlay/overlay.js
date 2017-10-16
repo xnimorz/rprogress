@@ -34,7 +34,7 @@ class Overlay extends Component {
     }
 
     render() {
-        return React.DOM.noscript();
+        return null;
     }
 }
 

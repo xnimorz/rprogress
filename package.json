@@ -1,9 +1,9 @@
 {
   "name": "rprogress",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "React progress bar for a heavy ajax sites",
   "main": "./lib/index.js",
-  "author": "Nikita Mostovoy <xnimor@ya.ru> (http://xnim.ru)",
+  "author": "Nikita Mostovoy <nik.mostovoy@gmail.com> (http://xnim.ru)",
   "scripts": {
     "test": "mocha --compilers js:babel-register ./tests/index",
     "build": "npm run babel && npm run css",
@@ -28,27 +28,28 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "e2": "^1.0.2"
+    "e2": "^2.0.0"
   },
   "peerDependencies": {
-      "react": "^0.14.0 || ^15.4.1",
-      "react-dom": "^0.14.0 || ^15.4.1"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "babel-register": "^6.5.2",
-    "cpx": "^1.2.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "mocha": "^2.4.5",
-    "postcss-loader": "^0.8.1",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.13",
     "autoprefixer": "^6.3.3",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.2",
     "babel-plugin-transform-react-jsx": "^6.5.2",
     "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "cpx": "^1.2.1",
     "css-loader": "^0.23.1",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "extract-text-webpack-plugin": "^1.0.1",
+    "mocha": "^2.4.5",
+    "postcss-loader": "^0.8.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13"
   }
 }

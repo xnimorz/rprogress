@@ -55,7 +55,7 @@ class RProgress extends Component {
         const { className, type, color } = this.props;
 
         if (!progress) {
-            return React.DOM.noscript();
+            return null;
         }
 
         let percents = progress;
