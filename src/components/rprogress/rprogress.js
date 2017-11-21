@@ -4,11 +4,13 @@ import API from '../../api';
 import Overlay from '../overlay/overlay';
 import { PROGRESS_COMPLETE } from '../../api/constants';
 import transitionEndEvent from '../../utils/whichTransitionEndEvent';
+import subscribe from 'subscribe-event';
 
 import styles from './rprogress-styles';
 
 const CYCLE_TYPE = 'cycle';
 const CYCLE_PERCENTS = 25;
+const TIMEOUT_DELAY_FOR_ANIMATIONS = 500;
 
 class RProgress extends Component {
     constructor(props, context) {
@@ -17,10 +19,28 @@ class RProgress extends Component {
         this.state = {
             progress: 0,
             active: false
-        };
+        };        
 
+        this.getReference = (progress) => {
+            this.progress = progress;
+        }
+    }
+
+    componentDidMount() {        
         API.subscribe((event) => {
-            const { data } = event;
+            const { data } = event;  
+            let unsubscribe;
+            let timeout;
+            
+            const hideProgress = () => {
+                unsubscribe();
+                clearTimeout(timeout);
+                
+                this.setState({
+                    progress: 0,
+                    active: false
+                });
+            };
 
             this.setState({
                 progress: data.position,
@@ -30,12 +50,9 @@ class RProgress extends Component {
             if (data.type === PROGRESS_COMPLETE) {
 
                 if (this.progress && this.props.type !== CYCLE_TYPE) {
-                    this.progress.addEventListener(transitionEndEvent, () => {
-                        this.setState({
-                            progress: 0,
-                            active: false
-                        });
-                    });
+                    unsubscribe = subscribe(this.progress, transitionEndEvent, hideProgress);
+                    // Run timeout in case transitionEndEvent failed for some reasons
+                    timeout = setTimeout(hideProgress, TIMEOUT_DELAY_FOR_ANIMATIONS)
                 } else {
                     this.setState({
                         progress: 0,
@@ -44,10 +61,6 @@ class RProgress extends Component {
                 }
             }
         });
-
-        this.getReference = (progress) => {
-            this.progress = progress;
-        }
     }
 
     render() {

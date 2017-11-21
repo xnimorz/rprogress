@@ -1,6 +1,6 @@
 {
   "name": "rprogress",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "React progress bar for a heavy ajax sites",
   "main": "./lib/index.js",
   "author": "Nikita Mostovoy <nik.mostovoy@gmail.com> (http://xnim.ru)",
@@ -28,7 +28,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "e2": "^2.0.0"
+    "e2": "^2.0.0",
+    "subscribe-event": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",

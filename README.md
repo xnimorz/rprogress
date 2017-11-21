@@ -13,6 +13,10 @@ Example: http://xnimorz.github.io/rprogress/
 ```
 npm install --save rprogress
 ```
+or
+```
+yarn add rprogress
+```
 
 ### Usage
 
